@@ -142,10 +142,10 @@ jobs:
     needs: [build_vscode_lsp_macos_x86_64, build_vscode_lsp_macos_aarch64]
     runs-on: macOS-11
     steps:
-    - uses: actions/download-artifact@v2
+    - uses: actions/download-artifact@v4.1.7
       with:
         name: vscode-lsp-binary-x86_64-apple-darwin
-    - uses: actions/download-artifact@v2
+    - uses: actions/download-artifact@v4.1.7
       with:
         name: vscode-lsp-binary-aarch64-apple-darwin
         path: bin
@@ -198,19 +198,19 @@ jobs:
     runs-on: macOS-11
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/download-artifact@v2
+    - uses: actions/download-artifact@v4.1.7
       with:
         name: vscode-lsp-binary-x86_64-unknown-linux-gnu
         path: vscode_extension/bin
-    - uses: actions/download-artifact@v2
+    - uses: actions/download-artifact@v4.1.7
       with:
         name: vscode-lsp-binary-x86_64-pc-windows-gnu
         path: vscode_extension/bin
-    - uses: actions/download-artifact@v2
+    - uses: actions/download-artifact@v4.1.7
       with:
         name: vscode-lsp-binary-darwin
         path: vscode_extension/bin
-    - uses: actions/download-artifact@v2
+    - uses: actions/download-artifact@v4.1.7
       with:
         name: vscode-lsp-binary-armv7-unknown-linux-gnueabihf
         path: vscode_extension/bin
@@ -258,13 +258,13 @@ jobs:
     needs: [docs, wasm_demo, wasm]
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: docs
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: wasm
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: wasm_demo
       - name: Publish Docs and Demos
