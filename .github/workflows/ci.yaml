@@ -280,7 +280,7 @@ jobs:
       with:
         version: 5.15.2
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
-    - uses: actions/download-artifact@v2
+    - uses: actions/download-artifact@v4.1.7
       with:
         name: cpp_bin-ubuntu-20.04
         path: cpp-package
